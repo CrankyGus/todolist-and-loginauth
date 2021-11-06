@@ -28,7 +28,11 @@ export default function Home() {
             <h2 className="text-center mb-4">Profile</h2>
             {error && <Alert variant="danger">{error}</Alert>}
             <strong>Email:</strong> {currentUser.email}
-            <Link to="/update-profile" className="btn btn-primary w-100 mt-3"onClick={handleLogout}>
+            <Link to="/todo" className="btn btn-secondary w-100 mt-3">
+              Todolist
+            </Link>
+
+            <Link to="/" className="btn btn-primary w-100 mt-3"onClick={handleLogout}>
               Logout
             </Link>
           </Card.Body>

@@ -3,6 +3,8 @@ import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from "../context/AuthContext"
 
+
+
 export default function Login() {
     const emailRef = useRef()
     const passwordRef = useRef()
@@ -10,7 +12,7 @@ export default function Login() {
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false)
     const history = useHistory()
-
+    
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -44,9 +46,7 @@ export default function Login() {
 
                         <Button disabled={loading} className="w-100 mt-3  " type="submit" >ล็อคอิน</Button>
                     </Form>
-                    {/*<div className="w-100 text-center mt-3">
-                        <Link to="/forgot-password">ลืมรหัสผ่าน ?</Link>
-                    </div>*/} 
+                    
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2 text-white">
